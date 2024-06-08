@@ -1,0 +1,36 @@
+#!/usr/bin/perl
+use CGI;
+$cgi=new CGI;
+$jobno = $cgi->param('c');
+
+chomp($jobno);
+
+$dir = "/webservers/cgidocs/mkumar/temp/manish/predhsp/hsp$jobno";
+#$dir = "/webservers/cgi-bin/palmpred/temp/palm$jobno";
+#$result = "/webservers/cgi-bin/palmpred/temp/palm$jobno/index.html";
+$result = "/webservers/cgidocs/mkumar/temp/manish/predhsp/hsp$jobno/result.html";
+
+print"Content-type: text/html\n\n";
+if(!(-e "$result"))
+{
+    print "<html>\n";
+    print "<HEAD>\n";
+    print "<TITLE> Status of your request for Heat Shock Protein prediction </TITLE>\n";
+    print "<META NAME=\"description\" CONTENT=\"Prediction of Heat Shock Proteins\">\n";
+
+    print "<meta http-equiv=\"refresh\" content=\"15;url=/cgi-bin/predhsp/chkres?c=$jobno\">\n";
+    print "</HEAD><body bgcolor=\"white\">\n";
+    print "<font size=3 color=blue><b>Your Job is in progress. <p>it may take some time to process the query, please wait ........</b></font>";
+    print "<br><font size=3 color=blue><b>Your Job Number is</font><font size=3 color=red><b> $jobno</b></font>.<br>";
+    print "<font size=3 color=blue><b>This page will <blink><font size=3 color=red><b>refresh</b></font></blink> in 15 seconds.</b></font></p>";
+    print "</body></html>\n";
+}
+else
+{
+    open(FP1,"$result");
+    while($line = <FP1>)
+    {
+	print "$line\n";	
+    }	
+    close(FP1);
+}
