@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      DNAint: A web-server for prediction of DNA-binding sites
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <br />
+    <table width="775" cellspacing="0" cellpadding="0" summary=
+    "Body Table" align="center">
+      <tr>
+        <td colspan="2">
+          <table width="775" cellspacing="0" cellpadding="0"
+          summary="top table">
+            <tr>
+              <td>
+                <table width="775" cellspacing="0" cellpadding=
+                "0" summary="top table">
+                  <tr>
+                    <td width="16" class="header">
+                      <img src="images/lcorner.gif" width="16"
+                      height="16" border="0" alt=" " />
+                    </td>
+                    <td width="743" class="header">
+                      <img src="images/spacer.gif" width="743"
+                      height="16" border="0" alt=" " />
+                    </td>
+                    <td width="16" class="header">
+                      <img src="images/rcorner.gif" width="16"
+                      height="16" border="0" alt=" " />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="header">
+                <table width="775" cellspacing="0" cellpadding=
+                "0" summary="top table">
+                  <tr border='2'>
+                    <td rowspan="2" width="300" id="logo">
+                      DNAint
+                    </td>
+                    <td width="475" align="right" valign=
+                    "bottom">
+                      <table width="100%" cellspacing="0"
+                      cellpadding="3" summary="top table">
+                        <tr>
+                          <td>
+                            &nbsp;
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="150" valign="top" id="nav">
+          <!-- NAVIGATION BEGIN //-->
+          <table summary="table" border="0" cellpadding="0"
+          cellspacing="1" width="100%">
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Home</font></a>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Submit</font></a>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Help</font></a>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Developers</font></a>
+              </td>
+            </tr>
+            
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Download</font></a>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Contact</font></a>
+              </td>
+            </tr>
+          </table><!-- NAVIGATION END //-->
+          <br />
+          <br />
+          <div align="center">
+            <script type="text/javascript">
+//<![CDATA[
+<!--
+google_ad_client = "pub-5580430883511691";
+google_ad_width = 120;
+google_ad_height = 240;
+google_ad_format = "120x240_as";
+google_ad_type = "text";
+google_ad_channel ="";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "336699";
+google_color_text = "333333";
+//-->
+//]]>
+</script> <script type="text/javascript" src=
+"http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+          </div>
+        </td>
+        <td width="625" valign="top">
+          <table width="100%" cellspacing="0" cellpadding="0"
+          summary="Table">
+            <tr>
+              <td id="pagetitle">
+                A Web-server for DNA-binding Amino Acids Prediction
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="images/spacer.gif" width="620" height=
+                "5" border="0" alt=" " />
+              </td>
+            </tr>
+            <tr>
+              <td id="content">
+<!-- content begin //-->
+<p>In this letter, I plan to discuss Your Website's pigheaded
+long-term goals quite extensively. Note that the details aren't
+pleasant. In fact, they're shocking. But I think that people who
+don't know what Your Website is up to surely need to be shocked.
+But before I continue, allow me to explain that I must ask that
+Your Website's comrades focus on what unites rather than divides
+us. I know they'll never do that, so here's an alternate
+proposal: They should, at the very least, back off and quit
+trying to pilfer the national treasure. Why is Your Website
+really so boisterous? Is it because I've catalogued all of its
+foibles -- and the list is pretty big? Or because it functions
+not as a social critic, but as an unoriginal imitator of the
+ruling ideologues? This can be answered most easily by stating
+that if it wants to be taken seriously, it should counter the
+arguments in this letter with facts, not illogical panaceas,
+personal anecdotes, or insults. In such a brief letter as this, I
+certainly cannot refute all the revenge fantasies of
+presumptuous, blathering fanatics, but perhaps I can brush away
+some of their most deliberate and flagrant commentaries.</p>
+<p>What does Your Website have to say about all of this? The
+answer, as expected, is nothing. Your Website frequently avers
+its support of democracy and its love of freedom. But one need
+only look at what Your Website is doing -- as opposed to what it
+is saying -- to understand its true aims.</p>
+<p>I could go on and on about Your Website's special form of
+classism, but you get the general idea. Contrast, for example,
+Your Website's hijinks with those of the most craven galoots I've
+ever seen, and observe that there <em>is</em> no contrast. I, by
+(genuine) contrast, take the view that if Your Website thinks
+that all minorities are poor, stupid ghetto trash, then it's
+sadly mistaken. Does anybody else feel the way I do, or am I
+alone in my disgust with Your Website?</p>
+<!-- content end //-->
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" id="copyright" align="center">
+          Copyright 2005, Your Website. All rights reserved.
+          Design by <a href=
+          "http://www.templatesforall.com">Templates For All</a>.
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

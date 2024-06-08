@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      DNAint: A web-server for prediction of DNA-binding sites
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <br />
+    <table width="775" cellspacing="0" cellpadding="0" summary=
+    "Body Table" align="center">
+      <tr>
+        <td colspan="2">
+          <table width="775" cellspacing="0" cellpadding="0"
+          summary="top table">
+            <tr>
+              <td>
+                <table width="775" cellspacing="0" cellpadding=
+                "0" summary="top table">
+                  <tr>
+                    <td width="16" class="header">
+                      <img src="images/lcorner.gif" width="16"
+                      height="16" border="0" alt=" " />
+                    </td>
+                    <td width="743" class="header">
+                      <img src="images/spacer.gif" width="743"
+                      height="16" border="0" alt=" " />
+                    </td>
+                    <td width="16" class="header">
+                      <img src="images/rcorner.gif" width="16"
+                      height="16" border="0" alt=" " />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="header">
+                <table width="775" cellspacing="0" cellpadding=
+                "0" summary="top table">
+                  <tr border='2'>
+                    <td rowspan="2" width="300" id="logo">
+                      DNAint
+                    </td>
+                    <td width="475" align="right" valign=
+                    "bottom">
+                      <table width="100%" cellspacing="0"
+                      cellpadding="3" summary="top table">
+                        <tr>
+                          <td>
+                            &nbsp;
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="150" valign="top" id="nav">
+          <!-- NAVIGATION BEGIN //-->
+          <table summary="table" border="0" cellpadding="0"
+          cellspacing="1" width="100%">
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Home</font></a>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Submit</font></a>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Help</font></a>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Developers</font></a>
+              </td>
+            </tr>
+            
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Download</font></a>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <a href="#" class="link">&bull; <font color=
+                "#000000">Contact</font></a>
+              </td>
+            </tr>
+          </table><!-- NAVIGATION END //-->
+          <br />
+          <br />
+          <div align="center">
+            <script type="text/javascript">
+//<![CDATA[
+<!--
+google_ad_client = "pub-5580430883511691";
+google_ad_width = 120;
+google_ad_height = 240;
+google_ad_format = "120x240_as";
+google_ad_type = "text";
+google_ad_channel ="";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "336699";
+google_color_text = "333333";
+//-->
+//]]>
+</script> <script type="text/javascript" src=
+"http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+          </div>
+        </td>
+        <td width="625" valign="top">
+          <table width="100%" cellspacing="0" cellpadding="0"
+          summary="Table">
+            <tr>
+              <td id="pagetitle">
+                A Web-server for DNA-binding Amino Acids Prediction
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="images/spacer.gif" width="620" height=
+                "5" border="0" alt=" " />
+              </td>
+            </tr>
+            <tr>
+              <td id="content">
+<!-- content begin //-->
+
+
+
+		  <form name="example" ACTION ="/cgibin/pprint/valid.pl" ENCTYPE="multipart/form-data" METHOD="post" onSubmit="return formValidation(this)">
+
+
+                 <P> Sequence Name: &nbsp;&nbsp;&nbsp;<INPUT TYPE =" TEXT" NAME ="name"></P>
+
+		  <P> E-mail Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE =" TEXT" NAME ="email"> </P>
+		   <P> Sequence: (Type/paste FASTA format amino acid sequence)<BR>
+		        <TEXTAREA ROWS="5" COLS="60" NAME ="seq"></TEXTAREA></P>
+
+                 <P> <font face="Arial" color =" red" >OR</font> 
+		      Upload Sequence file <INPUT type="file" name="file"> </P>
+
+                 <P> <font face="Arial" color =" red" ><blink>Please submit only one sequence at a time</blink> </font> </p>
+
+
+
+                 SVM threshold:&nbsp;&nbsp;&nbsp;   
+		      <SELECT name="svm_th">
+		     <OPTION value="-1">-1.0
+                     <OPTION value="-.9">-0.9
+                     <OPTION value="-.8">-0.8
+                     <OPTION value="-.7">-0.7
+                     <OPTION value="-.6">-0.6
+                     <OPTION value="-.5">-0.5
+                     <OPTION value="-.4">-0.4
+                     <OPTION value="-.3">-0.3
+                     <OPTION SELECTED value="-.2">-0.2
+		     <OPTION value="-.1">-0.1
+                     <OPTION value="0.0">0.0
+		     <OPTION value=".1">0.1
+                     <OPTION value=".2">0.2
+                     <OPTION value=".3">0.3
+                     <OPTION value="0.4">0.4
+                     <OPTION value=".5">0.5
+                     <OPTION value=".6">0.6
+                     <OPTION value=".7">0.7
+                     <OPTION value=".8">0.8
+                     <OPTION value=".9">0.9
+                     <OPTION value="1.0"> 1.0
+                     </SELECT>
+		     <BR><br>  
+		      <INPUT TYPE ="SUBMIT" VALUE ="Run Prediction"> 
+		      <INPUT TYPE ="RESET" VALUE ="Clear">
+</form>
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+<!--
+        <td colspan="2" id="copyright" align="center">
+          Copyright 2005, Your Website. All rights reserved.
+          Design by <a href=
+          "http://www.templatesforall.com">Templates For All</a>.
+        </td>
+-->
+      </tr>
+    </table>
+  </body>
+</html>

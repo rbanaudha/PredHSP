@@ -1,0 +1,171 @@
+<html>
+<head>
+<title>PredHSP :: A web-server for prediction of Heat-shock proteins & their sub-families</title>
+<meta http-equiv="Content-Type" content="text/html;">
+<meta name="keywords" content="Heat Shock Protein, prediction, SVM">
+<meta name="author" content="Manish Kumar">
+<meta name="generator" content="Written by Manish Kumar">
+
+<SCRIPT language=JavaScript>
+function makeArray() {
+     for (i = 0; i<makeArray.arguments.length; i++)
+         this[i] = makeArray.arguments[i];
+ }
+
+function getFullYear(d) {
+    var y = d.getYear();
+    if (y < 1000) {y += 1900};
+    return y;
+}
+
+//var zone = "EDT";
+var days = new makeArray("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+var months = new makeArray("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function format_time(t) {
+
+    var Day = t.getDay();
+    var Date = t.getDate();
+    var Month = t.getMonth();
+    var Year = t.getFullYear();
+
+    timeString = "";
+    timeString += days[Day];
+    timeString += ", ";
+    timeString += " ";
+    timeString += months[Month];
+    timeString += " ";
+    timeString += Date;
+    timeString += ", ";
+    timeString += " ";
+    timeString += Year;
+
+   return timeString;
+ }
+</SCRIPT>
+<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body bgcolor="#B49BCD" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#747AC6" vlink="#B49BCD">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr> 
+    <td valign="top" bgcolor="#B59CCD" align="center"><img name="header" src="images/head.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" height="22" background="images/blue_fill.gif" align="right"> 
+      <table width="220" border="0" cellspacing="0" cellpadding="0" height="22">
+        <tr> 
+          <td width="37"><img name="blue_crn" src="images/blue_crn.gif" width="37" height="22" border="0"></td>
+          <td background="images/lt_blue_fill.gif" class="date" width="200"> 
+            <script language=JavaScript>
+			<!--
+			d = new Date();
+			document.write(format_time(d));
+			// -->
+		</script>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+        <tr> 
+          <td width="140" bgcolor="#92A2E1" valign="top" align="center"> <br>
+            <table width="80%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="links"> <font color="#000080">MENU</font><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="index.html" class="links">HOME</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="submit.html" class="links">SUBMIT</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="help.html" class="links">HELP</a> <br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="contact.html" class="links">CONTACT</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="developers.html" class="links">DEVELOPERS</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="download.html" class="links">DOWNLOAD</a><br>
+                  <br>
+
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="30" height="100%">
+              <tr>
+		<td class="text" valign="top" bgcolor="#FFFFFF" height="370">
+		  <h2 align="center"><span>About this server ::</span></h2>
+                  <p align="justify"><font size="2">
+		      <!--<p align="justify"><font size="2"><b>About this server ::<br>-->
+                  <br>
+
+                  </b>PredHSP (<b>P</b>rediction of <b>H</b>eat <B>S</B>hock <B>P</B>rotein) is a web-server for predicting Heat Shock proteins and their class.  The prediction is done by SVM model trained on coupled amino acid composition. It is a two level prediction system. 1st level classify query sequence as Heat Shock or non-heat shock protein. In case the query sequence is a heat shock protein, it will be further classified into following six classes.<br><br>
+
+
+<ul>
+<li>Hsp20</li>
+<li>Hsp40</li>
+<li>Hsp60</li>
+<li>Hsp70</li>
+<li>Hsp90</li>
+<li>Hsp100</li>
+</ul>
+
+The SVM model is trained and tested on a set of 10,000 and 2,225 non-homologous non-HSP and HSP proteins respectively. It takes amino acid sequence in <U><B>FASTA format</B></U> as input and predict the Heat Shock Proteins and its class. Along with each protein predicted as HSP, sub-family prediction is also given in tabular format. This table contain two columns (i) Protein Name, (ii) Whether proteins are heat-shock or not and if heat shock it gives it subfamily also. The prediction result depends on the threshold value specified by the user. The default threshold is set as 0. To get prediction with less number of false positives, the user should choose higher threshold. For prediction with less number of false negatives, threshold should be very low.</p> 
+<br></br><br></br><br></br>
+<b>Citation:</b> Kumar R, Kumari B, Kumar M (2016) PredHSP: Sequence Based Proteome-Wide Heat Shock Protein Prediction and Classification Tool to Unlock the Stress Biology. PLoS ONE 11(5): e0155872. doi:10.1371/journal.pone.0155872.
+             </td>
+<!--
+<td><img src="images/fig1.gif"><br>
+</td>
+-->
+              </tr>
+</table>
+
+          </td>
+        </tr>
+        <tr> 
+          <td width="140" bgcolor="#92A2E1" height="27">&nbsp;</td>
+          <td align="right" height="27" bgcolor="#FFFFFF"><a href="http://www.best-wallpapers.com/"><img name="footer_right" src="images/footer_right.gif" width="110" height="27" border="0"></a></td>
+        </tr>
+        <tr> 
+          <td width="140" background="images/footer_fill.jpg" height="38">&nbsp;</td>
+          <td align="right" height="38" background="images/footer_fill.jpg"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/footer_fill.jpg">
+              <tr> 
+                <td valign="bottom" align="center" class="footer"><!--Free Stuff: <a href="http://www.best-wallpapers.com" class="links">Wallpapers</a>-->
+<!--
+                  <a href="http://www.imtech.res.in" class="links">Institute of Microbial Technology</a>
+                  <a href="http://www.imtech.res.in/raghava" class="links">Other servers@IMTech</a>
+-->
+		  </td>
+                <td align="right" width="110"><img name="footer_right2" src="images/footer_right2.gif" width="110" height="38" border="0"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td width="140" height="10">&nbsp;</td>
+          <td align="right" height="10">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+			<center><span style="width: 100%; font-family: helvetica; font-size: 6px;">
+			<!--Design downloaded from <a href="http://www.freewebtemplates.com" style="font-family: helvetica; font-size: 6px;">FreeWebTemplates.com</a><br>
+			Free web design, web templates, web layouts, and website resources!-->
+			</span></center><br><br>
+		

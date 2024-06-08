@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>PredHSP :: A web-server for prediction of Heat-shock proteins & their sub-families</title>
+<meta http-equiv="Content-Type" content="text/html;">
+<SCRIPT language=JavaScript>
+function makeArray() {
+     for (i = 0; i<makeArray.arguments.length; i++)
+         this[i] = makeArray.arguments[i];
+ }
+
+function getFullYear(d) {
+    var y = d.getYear();
+    if (y < 1000) {y += 1900};
+    return y;
+}
+
+//var zone = "EDT";
+var days = new makeArray("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+var months = new makeArray("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function format_time(t) {
+
+    var Day = t.getDay();
+    var Date = t.getDate();
+    var Month = t.getMonth();
+    var Year = t.getFullYear();
+
+    timeString = "";
+    timeString += days[Day];
+    timeString += ", ";
+    timeString += " ";
+    timeString += months[Month];
+    timeString += " ";
+    timeString += Date;
+    timeString += ", ";
+    timeString += " ";
+    timeString += Year;
+
+   return timeString;
+ }
+</SCRIPT>
+<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body bgcolor="#B49BCD" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#747AC6" vlink="#B49BCD">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr> 
+    <td valign="top" bgcolor="#B59CCD" align="center"><img name="header" src="images/head.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" height="22" background="images/blue_fill.gif" align="right"> 
+      <table width="220" border="0" cellspacing="0" cellpadding="0" height="22">
+        <tr> 
+          <td width="37"><img name="blue_crn" src="images/blue_crn.gif" width="37" height="22" border="0"></td>
+          <td background="images/lt_blue_fill.gif" class="date" width="200"> 
+            <script language=JavaScript>
+			<!--
+			d = new Date();
+			document.write(format_time(d));
+			// -->
+		</script>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+        <tr> 
+          <td width="140" bgcolor="#92A2E1" valign="top" align="center"> <br>
+            <table width="80%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="links"> <font color="#000080">MENU</font><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="index.html" class="links">HOME</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="submit.html" class="links">SUBMIT</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="help.html" class="links">HELP</a> <br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="contact.html" class="links">CONTACT</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="developers.html" class="links">DEVELOPERS</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="download.html" class="links">DOWNLOAD</a><br>
+                  <br>
+
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="30" height="100%">
+              <tr> 
+                <td class="text" valign="top" bgcolor="#FFFFFF" height="370"> 
+		  <h2 align="center"><span>Help for PredHSP ::</span></h2>
+                  <!--<p align="justify"><font size="2"><b>Help for Pprint ::<br></b>-->
+                  <br>
+<h3 align="justify"><span>The submission form</span></h3>
+To submit a protein sequence for prediction, following steps have to be followed. The numebr in parenthesis indicates the corrosponding input box of submission form (displayed in Figure 1).
+
+<ul>
+<li><b>Go to submit page of PredHSP. </B><A HREF ="http://10.154.4.34/mkumar/predhsp/submit.html" target="_blank"  TITLE="OPEN SUBMISSION PAGE IN NEW WINDOW">click here to open submission page</A><br>
+
+<li><b>Enter job name/sequence name.</font><font color='red'>[optional]</font></b><br>
+<!--li><b>Put a valid e-mail id. <font color='blue'>(2) </font><font color='red'>[optional]</font> </b><br> At this id you receive an e-mail when job will be completed.<br-->
+<li><b>Paste/upload FASTA format protein sequence.</b><br>
+<li><b>Select threshold of prediction.</b><br>
+<p align='justify'><font color='green'><b> The probability of correct prediction directly depends on the threshold. For prediction with high confidence (less probability of false positive prediction) high threshold should be choosen. At low threshold, the probability of false negative prediction is very low. On default theshold (-0.2) the rate of false negative and false positive prediction was nearly equal during training of SVM model.</b></font></p>
+<!--<li><b>In case you want to remove all enteries from submission page, click 'clear' tab. <font color='blue'>(6) </font></b><br>-->
+<li><b>Click 'Run Prediction' to submit protein for prediction.</b><br><br>
+</ul>  
+<table align='center' width='100%'><tr border='2'><td><a><img align="center" border="0" src="images/submit.png" width="600" height="410"</td></a></tr></table>
+<!--<img src='images/submit.png'>-->
+<p><b>Figure 1:  PredHSP submission page showing how to insert input sequences.</b></p><br>
+<h3 align="justify"><span>Query Sequence(s)</span></h3>
+PredHSP process only protein sequence file in fasta format. User have option to cut and paste in the text box or directly upload the sequence file. The limits of PredHSP is upto 25 sequences at a time. If user submit more than 25 sequences, PredHSP predict only first 25 sequences. Following figure 1 is an example showing how to submit a query in PredHSP.
+<h3 align="justify"><span>Example Sequence</span></h3>
+>sp|P35193|ATG19_YEAST Autophagy-related protein 19 OS=Saccharomyces cerevisiae (strain ATCC 204508 / S288c) GN=ATG19 PE=1 SV=1<br>
+MNNSKTNQQMNTSMGYPLTVYDECNKFQLIVPTLDANIMLWCIGQLSLLNDSNGCKHLFW<br>
+QPNDKSNVRILLNNYDYGHLFKYLQCQRKCSVYIGEGTLKKYNLTISTSFDNFLDLTPSE<br>
+EKESLCREDAHEDPVSPKAGSEEEISPNSTSNVVVSRECLDNFMKQLLKLEESLNKLELE<br>
+QKVTNKEPNHRISGTIDIPEDRSELVNFFTELKTVKQLEDVFQRYHDYERLSQECDSKTE<br>
+IASDHSKKETKIEVEPPNERSLQITMNQRDNSLYFQLFNNTNSVLAGNCKLKFTDAGDKP<br>
+TTQIIDMGPHEIGIKEYKEYRYFPYALDLEAGSTIEIENQYGEVIFLGKYGSSPMINLRP<br>
+PSRLSAESLQASQEPFYSFQIDTLPELDDSSIISTSISLSYDGDDNEKALTWEEL<br>
+>sp|O65719|HSP7C_ARATH Heat shock 70 kDa protein 3 OS=Arabidopsis thaliana GN=HSP70-3 PE=1 SV=1<br>
+MAGKGEGPAIGIDLGTTYSCVGVWQHDRVEIIANDQGNRTTPSYVAFTDSERLIGDAAKN<br>
+QVAMNPINTVFDAKRLIGRRFTDSSVQSDIKLWPFTLKSGPAEKPMIVVNYKGEDKEFSA<br>
+EEISSMILIKMREIAEAYLGTTIKNAVVTVPAYFNDSQRQATKDAGVIAGLNVMRIINEP<br>
+TAAAIAYGLDKKATSVGEKNVLIFDLGGGTFDVSLLTIEEGIFEVKATAGDTHLGGEDFD<br>
+NRMVNHFVQEFKRKNKKDISGNPRALRRLRTACERAKRTLSSTAQTTIEIDSLFDGIDFY<br>
+APITRARFEELNIDLFRKCMEPVEKCLRDAKMDKNSIDDVVLVGGSTRIPKVQQLLVDFF<br>
+NGKELCKSINPDEAVAYGAAVQAAILSGEGNEKVQDLLLLDVTPLSLGLETAGGVMTVLI<br>
+QRNTTIPTKKEQVFSTYSDNQPGVLIQVYEGERARTKDNNLLGKFELSGIPPAPRGVPQI<br>
+TVCFDIDANGILNVSAEDKTTGQKNKITITNDKGRLSKDEIEKMVQEAEKYKSEDEEHKK<br>
+KVDAKNALENYAYNMRNTIRDEKIGEKLAGDDKKKIEDSIEAAIEWLEANQLAECDEFED<br>
+KMKELESICNPIIAKMYQGGEAGGPAAGGMDEDVPPSAGGAGPKIEEVD<br>
+>sp|Q14568|HS902_HUMAN Heat shock protein HSP 90-alpha A2 OS=Homo sapiens GN=HSP90AA2P PE=1 SV=2<br>
+MPEETQTQDQPMEEEEVETFAFQAEIAQLMSLIINTFYSNKEIFLRELISNSSDALDKIW<br>
+YESLTDPSKLDSGKELHINLIPNKQDQTLTIVDTGIGMTKADLINNLGTIAKSGTKAFME<br>
+ALQAGADISMIGQFGVSFYSAYLVAEKVTVITKHNDDEQYAWESSAGGSFTVRTDTGERM<br>
+GRGTKVILHLKEDQTEYLEEQRIKEIVKKHSQLIGYPITLFVEKECDKEVSDDETEEKED<br>
+KEEEKEKEEKESKDKPEIEDVGSDEEEEKKDGDKKKKKTKEKYIDQEELNKTKPIWTRNP<br>
+DDITNEEYGEFCKNLTNDWEDHLAVKHFSVEGQLEFRALLFVP<br>
+<h3 align="justify"><span>Prediction Result</span></h3>
+In response to the submitted protein sequence(s), PredHSP generates the prediction result in tabular form. We also provide a job number, if user have any query regarding their result, he/she can contact us. Here is a sample of prediction done in response to query sequences (Figure 2).<br><br>
+<table align='center' width='100%'><tr border='2'><td><a><img align="center" border="0" src="images/result.png" width="600" height="410"</td></a></tr></table>
+<p><b>Figure 2: Screenshot of PredHSP prediction result.</b></p>
+
+
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td width="140" bgcolor="#92A2E1" height="27">&nbsp;</td>
+          <td align="right" height="27" bgcolor="#FFFFFF"><a href="http://www.best-wallpapers.com/"><img name="footer_right" src="images/footer_right.gif" width="110" height="27" border="0"></td>
+        </tr>
+        <tr> 
+          <td width="140" background="images/footer_fill.jpg" height="38">&nbsp;</td>
+          <td align="right" height="38" background="images/footer_fill.jpg"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/footer_fill.jpg">
+              <tr> 
+                <td valign="bottom" align="center" class="footer"><!--Free Stuff: <a href="http://www.best-wallpapers.com" class="links">Wallpapers</a>-->
+                  <a href="http://www.imtech.res.in" class="links">Institute of Microbial Technology</a>
+                  <a href="http://www.imtech.res.in/raghava" class="links">Other servers@IMTech</a>
+
+                <td align="right" width="110"><img name="footer_right2" src="images/footer_right2.gif" width="110" height="38" border="0"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td width="140" height="10">&nbsp;</td>
+          <td align="right" height="10">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+			<center><span style="width: 100%; font-family: helvetica; font-size: 6px;">
+			<!--Design downloaded from <a href="http://www.freewebtemplates.com" style="font-family: helvetica; font-size: 6px;">FreeWebTemplates.com</a><br>
+			Free web design, web templates, web layouts, and website resources!-->
+			</span></center><br><br>
+		

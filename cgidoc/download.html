@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>PredHSP :: A web-server for prediction of Heat-shock proteins and their sub-families</title>
+<meta http-equiv="Content-Type" content="text/html;">
+<SCRIPT language=JavaScript>
+function makeArray() {
+     for (i = 0; i<makeArray.arguments.length; i++)
+         this[i] = makeArray.arguments[i];
+ }
+
+function getFullYear(d) {
+    var y = d.getYear();
+    if (y < 1000) {y += 1900};
+    return y;
+}
+
+//var zone = "EDT";
+var days = new makeArray("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+var months = new makeArray("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function format_time(t) {
+
+    var Day = t.getDay();
+    var Date = t.getDate();
+    var Month = t.getMonth();
+    var Year = t.getFullYear();
+
+    timeString = "";
+    timeString += days[Day];
+    timeString += ", ";
+    timeString += " ";
+    timeString += months[Month];
+    timeString += " ";
+    timeString += Date;
+    timeString += ", ";
+    timeString += " ";
+    timeString += Year;
+
+   return timeString;
+ }
+</SCRIPT>
+<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body bgcolor="#B49BCD" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#747AC6" vlink="#B49BCD">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr> 
+    <td valign="top" bgcolor="#B59CCD" align="center"><img name="header" src="images/head.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" height="22" background="images/blue_fill.gif" align="right"> 
+      <table width="220" border="0" cellspacing="0" cellpadding="0" height="22">
+        <tr> 
+          <td width="37"><img name="blue_crn" src="images/blue_crn.gif" width="37" height="22" border="0"></td>
+          <td background="images/lt_blue_fill.gif" class="date" width="200"> 
+            <script language=JavaScript>
+			<!--
+			d = new Date();
+			document.write(format_time(d));
+			// -->
+		</script>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+        <tr> 
+          <td width="140" bgcolor="#92A2E1" valign="top" align="center"> <br>
+            <table width="80%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="links"> <font color="#000080">MENU</font><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="index.html" class="links">HOME</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="submit.html" class="links">SUBMIT</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="help.html" class="links">HELP</a> <br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="contact.html" class="links">CONTACT</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="developers.html" class="links">DEVELOPERS</a><br>
+                  <br>
+                  <img src="images/square.gif" width="7" height="7"> 
+                  <a href="download.html" class="links">DOWNLOAD</a><br>
+                  <br>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="30" height="100%">
+              <tr> 
+                <td class="text" valign="top" bgcolor="#FFFFFF" height="370">
+		  <h2 align="center"><span>Download ::</span></h2>
+                  <!--<p align="justify"><font size="2"><b>Download ::<br></b>
+                  <br>-->
+<ul>
+
+<li><b>Dataset</b><br><a href="Dataset.zip">click here</a>
+<li><b>Standalone Software</b><br><a href="Standalone_software.zip">click here</a>
+</ul>  
+
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td width="140" bgcolor="#92A2E1" height="27">&nbsp;</td>
+          <td align="right" height="27" bgcolor="#FFFFFF"><a href="http://www.best-wallpapers.com/"><img name="footer_right" src="images/footer_right.gif" width="110" height="27" border="0"></td>
+        </tr>
+        <tr> 
+          <td width="140" background="images/footer_fill.jpg" height="38">&nbsp;</td>
+          <td align="right" height="38" background="images/footer_fill.jpg"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" background="images/footer_fill.jpg">
+              <tr> 
+                <td valign="bottom" align="center" class="footer"><!--Free Stuff: <a href="http://www.best-wallpapers.com" class="links">Wallpapers</a>-->
+<!--
+                  <a href="http://www.imtech.res.in" class="links">Institute of Microbial Technology</a>
+                  <a href="http://www.imtech.res.in/raghava" class="links">Other servers@IMTech</a>
+-->
+                <td align="right" width="110"><img name="footer_right2" src="images/footer_right2.gif" width="110" height="38" border="0"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td width="140" height="10">&nbsp;</td>
+          <td align="right" height="10">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+			<center><span style="width: 100%; font-family: helvetica; font-size: 6px;">
+			</span></center><br><br>
+		
